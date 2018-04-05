@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+}
+
+.contenedor { 
+    margin: 0 auto;
+    width: 85%;
+}
+
+.titulo {
+    text-align: center;
+}
