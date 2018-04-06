@@ -1,0 +1,16 @@
+.contenedor_switch p {
+    color: white;
+    display: inline;
+    padding: 5px 10px;
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+    float: right;
+    margin-right: 75%;
+}
+
+.bordeNegro {
+    border: 2px solid #000;
+}

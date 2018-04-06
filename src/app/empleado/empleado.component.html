@@ -1,7 +1,57 @@
 <h2>{{titulo}}</h2>
-<ul>
-    <li>Nombre: {{empleado.nombre}}</li>
-    <li>Edad: {{empleado.edad}}</li>
-    <li>Cargo: {{empleado.cargo}}</li>
-    <li>Contratado: {{empleado.contratado}}</li>
-</ul>
+
+<div class="contenedor">
+  <div class="contenedor_empleado" *ngIf="!trabajador_externo">
+    <button (click)="cambiarExterno(true)">Mostrar trabajador</button>
+    <ul>
+      <li>Nombre: {{empleado.nombre}}</li>
+      <li>Edad: {{empleado.edad}}</li>
+      <li>Cargo: {{empleado.cargo}}</li>
+      <li>Contratado: {{empleado.contratado}}</li>
+    </ul>
+  </div>
+
+  <div class="contenedor_trabajador" *ngIf="trabajador_externo">
+    <button (click)="cambiarExterno(false)">Mostrar empleado</button>
+    <h3>Listado de trabajadores:</h3>
+    <ul>
+      <li *ngFor="let trabajador of trabajadores; let i = index">
+        <strong>Trabajador {{i+1}}:</strong> 
+        <ul>
+          <li>Nombre: {{trabajador.nombre}}</li>
+          <li>Edad: {{trabajador.edad}}</li>
+          <li>Cargo: {{trabajador.cargo}}</li>
+          <li>Contratado: {{trabajador.contratado}}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="contenedor_switch">
+    <h3>Color switch</h3>
+    <ul [ngSwitch]="color">
+      <li *ngSwitchCase="'red'"><p [ngStyle]="{'background': color}">Es de color rojo</p></li>
+      <li *ngSwitchCase="'blue'"><p [ngStyle]="{'background': color}">Es de color azul</p></li>
+      <li *ngSwitchCase="'green'"><p [ngStyle]="{'background': color}">Es de color verde</p></li>
+      <li *ngSwitchCase="'gray'"><p [ngStyle]="{'background': color}">Es de color amarillo</p></li>
+      <li *ngSwitchDefault><p [ngStyle]="{'background': color}">Es un color por defecto</p></li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="contenedor_databinding">
+    <h3>Selector de color:</h3>
+    <input type="text" 
+      [(ngModel)]="color_seleccionado"
+      [class.bordeNegro]="color_seleccionado == 'blue'">
+
+    <div class="caja" 
+      [ngStyle]="{'background': color_seleccionado}"
+      [style.border]="color_seleccionado == 'red' ? '5px solid black' : '1px solid teal'">
+    </div>
+    <div style="clear: both"></div>
+  </div>
+</div>
