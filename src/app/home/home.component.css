@@ -1,0 +1,9 @@
+.titulo-home {
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

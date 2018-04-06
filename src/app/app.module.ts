@@ -7,17 +7,24 @@ import { AppComponent } from './app.component';
 import { FrutaComponent } from './fruta/fruta.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 
+import { AppRoutingModule } from './/app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { ContactoComponent } from './contacto/contacto.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FrutaComponent,
-    EmpleadoComponent
+    EmpleadoComponent,
+    HomeComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
