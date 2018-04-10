@@ -6,10 +6,11 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FrutaComponent } from './fruta/fruta.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
-
-import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { ConversorPipe } from './pipes/conversor.pipe';
+import { CocheComponent } from './coche/coche.component';
 
 
 @NgModule({
@@ -18,7 +19,9 @@ import { ContactoComponent } from './contacto/contacto.component';
     FrutaComponent,
     EmpleadoComponent,
     HomeComponent,
-    ContactoComponent
+    ContactoComponent,
+    CocheComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,

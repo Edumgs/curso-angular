@@ -12,9 +12,11 @@ export class HomeComponent implements OnInit {
   public titulo: string;
   public listado_ropa: Array<string>;
   public prenda_a_guardar: string;
+  public fecha;
 
   constructor(private ropaService: RopaService) {
     this.titulo = "Página Principal";
+    this.fecha = new Date(2018,3,9);
   }
 
   ngOnInit() {
