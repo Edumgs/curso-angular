@@ -1,0 +1,17 @@
+<h2>Componente plantilla - <span class="subtitulo">{{titulo}}</span></h2>
+
+<button (click)="cambiar()">Cambiar</button><br><br>
+
+<div *ngIf="administrador; then admin else noAdmin"></div>
+
+<ng-template #admin>
+  <div class="mensaje positivo">
+    <strong>Eres el administrador de la WebApp</strong>
+  </div>
+</ng-template>
+
+<ng-template #noAdmin>
+  <div class="mensaje negativo">
+    <strong>No eres el administrador de la WebApp</strong>
+  </div>
+</ng-template>

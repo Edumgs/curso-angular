@@ -1,0 +1,19 @@
+.subtitulo {
+    font-size: .8em;
+    color: rgba(0, 0, 0, .8);
+}
+
+.mensaje {
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+.positivo {
+    background-color: darkgreen;
+}
+
+.negativo {
+    background-color: darkred;
+}
