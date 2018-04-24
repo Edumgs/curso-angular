@@ -10,10 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { CocheComponent } from './coche/coche.component';
 import { PlantillaComponent } from './plantilla/plantilla.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { HijoComponent } from './hijo/hijo.component';
+import { AppRoutingModule } from './app-routing.module';
 import { ConversorPipe } from './pipes/conversor.pipe';
-
-
 
 @NgModule({
   declarations: [
@@ -24,6 +23,7 @@ import { ConversorPipe } from './pipes/conversor.pipe';
     ContactoComponent,
     CocheComponent,
     PlantillaComponent,
+    HijoComponent,
     ConversorPipe
   ],
   imports: [

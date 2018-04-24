@@ -15,3 +15,17 @@
     <strong>No eres el administrador de la WebApp</strong>
   </div>
 </ng-template>
+
+<hr>
+
+<h3>Propiedad input en Angular</h3>
+<app-hijo 
+  [texto1]="dato_externo"
+  [texto2]="identity.tematica"
+  (desde_el_hijo)="recibirDatos($event)">
+</app-hijo>
+
+<div *ngIf="datos_del_hijo">
+  <h3>Datos del hijo: {{datos_del_hijo.nombre}}</h3>
+  <h3>Datos del hijo: {{datos_del_hijo.web}}</h3>
+</div>
